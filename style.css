@@ -135,7 +135,7 @@ h1{
     .share-overlay{
         width: auto;
         padding: 0.75rem;
-        border-radius: 1rem;
+        border-radius: 0.5rem;
     }
 }
 
@@ -181,7 +181,7 @@ h1{
         content: '';
         width: 1.5rem;
         height: 1.5rem;
-        border-radius: 3px;
+        border-radius: 2px;
         background-color: var(--Very-Dark-Grayish-Blue);
         bottom: -6px;
         right: 60px;
