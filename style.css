@@ -35,9 +35,7 @@ h1{
     background-color: var(--Light-Grayish-Blue);
     border-radius: 0.75rem;
     margin: 1.9rem;
-    overflow: hidden;
-    /* display: grid; */
-    /* display: flex; */
+    /* overflow: hidden; */
     max-width: 320px;
     position: relative;
 }
@@ -51,11 +49,13 @@ h1{
 
 .article-img{
     max-width: 100%;
+    border-radius: 0.75rem 0.75rem 0 0;
 }
 
 @media (min-width: 760px) {
     .article-img{
         max-width: 40%;
+        border-radius: 0.75rem 0 0 0.75rem;
     }
 }
 .details{
@@ -69,7 +69,6 @@ h1{
 
 .title{
     font-size: 1rem;
-    /* margin: 10px 0; */
     margin-bottom: 12px;
 }
 @media (min-width: 760px) {
@@ -110,18 +109,20 @@ h1{
 }
 
 .share-btn{
-    background-color: var(--Grayish-Blue);
+    background-color: var(--Very-Dark-Grayish-Blue);
     height: 2rem;
     width: 2rem;
     border: 0;
     border-radius: 2.5rem;
     margin-left: auto;
+    cursor: pointer;
 }
 
 .share-overlay{
     background-color: var(--Very-Dark-Grayish-Blue);
     padding: 1.5rem;
     width: 100%;
+    border-radius: 0 0 0.75rem 0.75rem;
     display: flex;
     align-items: center;
     position: absolute;
@@ -143,6 +144,12 @@ h1{
     pointer-events: auto;
     opacity: 1;
 }
+@media (min-width: 760px) {
+    .share-overlay.active {
+        bottom: 5.5rem;
+        right: -1.44rem;
+    }
+}
 
 .txt{
     letter-spacing: 2px;
@@ -154,6 +161,9 @@ h1{
     padding-right: 0.75rem;
     height: 1.5rem;
 }
+.close{
+    background-color: var(--Grayish-Blue);
+}
 
 .share-icon{
     filter: brightness(0) invert(1);
@@ -161,5 +171,20 @@ h1{
 @media (min-width: 760px) {
     #closeOverlay{
         display: none;
+    }
+}
+
+@media (min-width: 760px) {
+    .tooltip{
+        position: absolute;
+        z-index: -1;
+        content: '';
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 3px;
+        background-color: var(--Very-Dark-Grayish-Blue);
+        bottom: -6px;
+        right: 60px;
+        transform: rotate(45deg);
     }
 }

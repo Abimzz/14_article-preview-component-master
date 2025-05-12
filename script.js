@@ -3,7 +3,7 @@ const shareOverlay = document.getElementById('shareOverlay');
 const closeOverlay = document.getElementById('closeOverlay');
 
 shareButton.addEventListener('click', () => {
-    shareOverlay.classList.add('active');
+    shareOverlay.classList.toggle('active');
 });
 
 closeOverlay.addEventListener('click', () => {
